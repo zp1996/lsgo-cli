@@ -33,7 +33,8 @@ gulp.task("image", () => {
 gulp.task("es2015", () => {
 	return gulp.src(filePath[1])
 						 .pipe(babel({
-						 		presets: ['es2015']
+						 		presets: ['es2015'],
+						 		plugins: ['transform-runtime']
 						 }))
 						 .pipe(gulp.dest("./build/js"));
 });
